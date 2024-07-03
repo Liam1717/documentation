@@ -45,6 +45,16 @@ corner of the opportunity.
    :align: center
    :alt: A lost opportunity with the lost banner added.
 
+.. tip::
+   To mark an **inactive** opportunity as lost, first navigate to the opportunity's detail form.
+   Click the :guilabel:`Restore` button to restore the opportunity to an active status.
+
+.. note::
+   Only *active* opportunities can be marked as *Won* or *Lost*.
+
+   To mark an inactive opportunity as lost, first set the probability of the opportunity to 0%. The
+   :guilabel:`Lost` button can now be used to mark the opportunity as lost.
+
 .. _crm/lost-reasons:
 
 Create/edit lost reasons
