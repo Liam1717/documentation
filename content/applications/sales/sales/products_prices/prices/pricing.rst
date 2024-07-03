@@ -61,6 +61,11 @@ modified at any time.
    The :guilabel:`Public Pricelist` is the default pricelist used with Odoo *Sales* and *eCommerce*.
    This pricelist is applied by default, if there are no matching criteria.
 
+.. note::
+   In Odoo 17 (and above), it is no longer required to have a pricelist entered in the
+   :guilabel:`Pricelist` field on a quotation form in order to confirm it (i.e. turn it into a sales
+   order).
+
 From the :guilabel:`Pricelists` page, either select the desired pricelist to edit, or click
 :guilabel:`New` to create a new pricelist, which reveals a blank pricelist form that can be
 configured in a number of different ways.
@@ -75,6 +80,9 @@ the blank field. Next, select which :guilabel:`Currency` should be used.
 Then, if working in a multi-company environment, select which company this pricelist should apply to
 in the :guilabel:`Company` field. If this field is left blank, the pricelist is automatically
 applied to all companies in the database.
+
+It should also be noted that, in Odoo 17 (and above), a chatter section can be found on pricelist
+forms, which enhances the ability to communicate about it.
 
 Price rules tab
 ---------------
@@ -124,7 +132,7 @@ based on formulas.
 Check out the :ref:`Advanced price rules (discounts, formulas) <sales/advanced-price-rules>` section
 for detailed steps on how to add advanced price rules to a pricelist.
 
-Time-based rules tab
+Time-based rules tab (***NOW RECURRING PRICES***)
 --------------------
 
 Time-based rules are used specifically with :doc:`subscription products
@@ -186,6 +194,8 @@ Lastly, there is the option to add an :guilabel:`E-commerce Promotional Code`. T
 in the desired promo code that, when entered during the checkout process, applies the pricelist to
 the customer, even if the customer does not fall into the previously-specified criteria.
 
+ADD INFO ABOUT DISCOUNTS SECTION (see if certain settings need to be applied in order to see it)
+
 Show discount percentage to customers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -236,6 +246,17 @@ the drop-down menu in the :guilabel:`Pricelist` field.
 .. image:: pricing/customer-form-pricelist-field.png
    :align: center
    :alt: The pricelist field in a customer detail form in Odoo Sales.
+
+.. note::
+   When a customer is added to the database, either via the *Contacts* app or directly from a
+   quotation form, the default pricelist is automatically applied to them. There is **no way** to
+   have a blank *Pricelist* field on a contact form. Even if that field is left blank, the default
+   pricelist returns when that contact form is opened again.
+
+   However, when that contact is added to a quotation, and the *Pricelist* field is auto-populated
+   (based on the information from their contact form), that predetermined pricelist can be removed
+   from the *Pricelist* field, and the quotation can still be confirmed, and subsequently, turned
+   into a sales order.
 
 .. _sales/multiple-prices-per-product:
 
